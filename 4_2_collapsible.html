@@ -125,29 +125,29 @@
     <!-- START HERE -->
 
     <!-- COLLAPSIBLE -->
-    <ul>
+    <ul class="collapsible" data-collapsible="accordion">
       <li>
-        <div>
-          <i></i>First
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i>First
         </div>
-        <div>
-          <span>This is the first area</span>
+        <div class="collapsible-body">
+          <span class="">This is the first area</span>
         </div>
       </li>
       <li>
         <!-- pre-select -->
-        <div>
-          <i></i>Second
+        <div class="collapsible-header active">
+          <i class="material-icons">help</i>Second
         </div>
-        <div>
+        <div class="collapsible-body">
           <span>This is the second area</span>
         </div>
       </li>
       <li>
-        <div>
-          <i></i>Third
+        <div  class="collapsible-header active">
+          <i  class="material-icons">info</i>Third
         </div>
-        <div>
+        <div  class="collapsible-body">
           <span>This is the third area</span>
         </div>
       </li>
@@ -155,34 +155,39 @@
 
     <!-- EXPANDABLE COLLAPSIBLE -->
 
-    <ul>
+    <ul class="collapsible" data-collapsible="expandable">
       <li>
-        <div>
-          <i></i>First
+        <div class="collapsible-header">
+          <i class="material-icons"></i>First
         </div>
         <div class="collapsible-body">
           <span>This is the first area</span>
         </div>
       </li>
       <li>
-        <div>
-          <i></i>Second
+      
+        <div  class="collapsible-header">
+          <i class="material-icons"></i>Second
         </div>
-        <div>
+        <div  class="collapsible-body">
           <span>This is the second area</span>
         </div>
       </li>
       <li>
-        <div>
-          <i></i>Third
+        <div   class="collapsible-header">
+          <i  class="material-icons"></i>Third
         </div>
-        <div>
+        <div  class="collapsible-body">
           <span>This is the third area</span>
         </div>
       </li>
     </ul>
 
     <!-- END HERE -->
+<br>
+<br>
+<br>
+<br>
 
 
   </div>
@@ -204,7 +209,10 @@
       });
 
       // JAVASCRIPT START HERE //
-
+      $('.collapsible').collapsible({
+        onOpen: function() {alert ('Open')},
+        onClose: function() {alert ('Close')}
+      });
 
 
 
